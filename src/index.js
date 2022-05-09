@@ -40,3 +40,52 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+// NAV ITEMS
+const menuItems = document.querySelectorAll("nav a")
+for (i=0; i < menuItems.length; i++) {
+  menuItems[i].textContent = siteContent.nav[`nav-item-${i}`]
+}
+
+const logo = document.querySelector("img#logo-img")
+logo.setAttribute("src", siteContent.images["logo-img"])
+
+
+// CTA'S
+const cta = document.querySelector("section.cta")
+cta.querySelector("h1").textContent = siteContent.cta.h1
+cta.querySelector("button").textContent = siteContent.cta.button
+cta.querySelector("img").setAttribute("src", siteContent.images["cta-img"])
+
+
+// MAIN CONTENT
+const topContent = document.querySelectorAll(".main-content .top-content .text-content")
+
+topContent[0].children[0].textContent = siteContent["main-content"]["features-h4"]
+topContent[0].children[1].textContent = siteContent["main-content"]["features-content"]
+topContent[1].children[0].textContent = siteContent["main-content"]["about-h4"]
+topContent[1].children[1].textContent = siteContent["main-content"]["about-content"]
+
+const midImg = document.querySelector("img.middle-img")
+midImg.setAttribute("src", siteContent.images["accent-img"])
+
+const btmContent = document.querySelectorAll(".main-content .bottom-content .text-content")
+btmContent[0].children[0].textContent = siteContent["main-content"]["services-h4"]
+btmContent[0].children[1].textContent = siteContent["main-content"]["services-content"]
+btmContent[1].children[0].textContent = siteContent["main-content"]["product-h4"]
+btmContent[1].children[1].textContent = siteContent["main-content"]["product-content"]
+btmContent[2].children[0].textContent = siteContent["main-content"]["vision-h4"]
+btmContent[2].children[1].textContent = siteContent["main-content"]["vision-content"]
+
+// CONTACT
+const contact = document.querySelector("section.contact")
+contact.children[0].textContent = siteContent.contact["contact-h4"]
+contact.children[1].textContent = siteContent.contact.address
+contact.children[2].textContent = siteContent.contact.phone
+contact.children[3].textContent = siteContent.contact.email
+
+// FOOTER
+const footer = document.querySelector("footer a")
+footer.textContent = siteContent.footer.copyright
+
